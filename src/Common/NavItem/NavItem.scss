@@ -1,0 +1,28 @@
+.Nav {
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 52px;
+        text-align: center;
+        color: #E10413;
+
+        &.active {
+            img {
+                fill: #fff;
+            }
+        }
+
+        &.active::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            width: 60px;
+            height: 70px;
+            border-radius: 5px;
+            background: #EBEBED;
+            z-index: -1;
+        }
+    }
+}

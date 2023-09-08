@@ -1,0 +1,19 @@
+.Nav {
+    padding: 12px 0;
+
+    &__wrap {
+        padding: 0 30px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 9px;
+        font-weight: bold;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
+        z-index: 2;
+    }
+}
