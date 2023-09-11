@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 import './NavItem.scss'
 
-const NavItem = ({ iconSrc, iconTitle, itemId, isActive, onItemClick }) => {
+const NavItem = ({ iconSrc, iconTitle, isActive, onItemClick, pageSrc }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const [activeItemPath, setActiveItemPath] = useState(null);
+
+  useEffect(() => {
+    setActiveItemPath(pageSrc)
+  }, [pageSrc])
 
   const handleClick = () => {
-    onItemClick(itemId)
+    setActiveItemPath(currentPath);
+    onItemClick(activeItemPath)
+    navigate(pageSrc)
   };
+  
 
   return (
    <li 

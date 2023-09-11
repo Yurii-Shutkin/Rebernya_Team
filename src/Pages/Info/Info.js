@@ -1,8 +1,12 @@
 import React from 'react'
 import './Info.scss'
+import Home from '../../Components/Home'
 
 export default function Info() {
   return (
-    <div>Info</div>
+    <div>
+      <Home />
+      Info
+      </div>
   )
 }
