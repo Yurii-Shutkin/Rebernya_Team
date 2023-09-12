@@ -9,6 +9,7 @@ import PointSystem from './Pages/PointSystem/PointSystem';
 import Info from './Pages/Info/Info';
 import ShareCommon from './Pages/ShareCommon/ShareCommon';
 import Chat from './Pages/Chat/Chat';
+import NumberConfirm from './Pages/NumberConfirm/NumberConfirm';
 
 function App() {
   // const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL;
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path={'/home'} element={<Home />} />
           <Route path={'/auth'} element={<Auth />} />
+          <Route path={'/confirm_num'} element={<NumberConfirm />} />
 
         </Routes>
         <Routes>

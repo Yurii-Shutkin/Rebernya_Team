@@ -1,0 +1,26 @@
+.auth {
+    padding: 60px 50px 0; 
+
+    &__title {
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    &__greet {
+        color: #D60013;
+        font-size: 27px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    &__placeholder {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__divider {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
