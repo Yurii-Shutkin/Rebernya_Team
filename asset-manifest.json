@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Rebernya_Team/static/css/main.24c137ed.css",
-    "main.js": "/Rebernya_Team/static/js/main.e54aeeaa.js",
+    "main.js": "/Rebernya_Team/static/js/main.35605f54.js",
     "static/js/787.8963890b.chunk.js": "/Rebernya_Team/static/js/787.8963890b.chunk.js",
     "index.html": "/Rebernya_Team/index.html",
     "static/media/info_icon.svg": "/Rebernya_Team/static/media/info_icon.721ea7f71d9f991d8a61ed350ca6c606.svg",
     "main.24c137ed.css.map": "/Rebernya_Team/static/css/main.24c137ed.css.map",
-    "main.e54aeeaa.js.map": "/Rebernya_Team/static/js/main.e54aeeaa.js.map",
+    "main.35605f54.js.map": "/Rebernya_Team/static/js/main.35605f54.js.map",
     "787.8963890b.chunk.js.map": "/Rebernya_Team/static/js/787.8963890b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24c137ed.css",
-    "static/js/main.e54aeeaa.js"
+    "static/js/main.35605f54.js"
   ]
 }
