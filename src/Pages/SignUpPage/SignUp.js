@@ -30,7 +30,6 @@ export default function SignUp ({supabase}) {
     
   const onClickHandler = () => {
     console.log(formData)
-    navigate('/confirm')
   }
 
 
@@ -52,6 +51,7 @@ export default function SignUp ({supabase}) {
           }
         }
       )
+      navigate('/confirm')
       console.log('Check your verif link')
 
     } catch (error){
