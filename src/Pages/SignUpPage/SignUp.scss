@@ -1,7 +1,19 @@
 .signUp {
     padding: 30% 50px;
-}
 
-.input {
-    margin-bottom: 40px;
+    &__input {
+        display: block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        appearance: none;
+        outline: none;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        border-bottom: 1px solid #CACACA;
+        background: transparent;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
 }

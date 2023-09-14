@@ -1,16 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './Button.scss'
 
-export default function Button({ type, title, color, onClickHandler, url }) {
+export default function Button({ type, title, color, onClickHandler }) {
   return (
-    <Link  
-      to={url}
+    <button  
       type={type} 
       className={'btn ' + color}
       onClick={onClickHandler}
     >
         {title}
-    </Link>
+    </button>
   )
 }

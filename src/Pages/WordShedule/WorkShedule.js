@@ -2,10 +2,10 @@ import React from 'react'
 import './WorkShedule.scss'
 import Home from '../../Components/Home'
 
-export default function WorkShedule() {
+export default function WorkShedule({supabase}) {
   return (
     <div>
-      <Home />
+      <Home supabase={supabase}/>
       WorkShedule
     </div>
   )

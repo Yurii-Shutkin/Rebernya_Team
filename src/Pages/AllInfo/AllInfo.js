@@ -2,10 +2,10 @@ import React from 'react'
 import './AllInfo.scss'
 import Home from '../../Components/Home'
 
-export default function AllInfo() {
+export default function AllInfo({ supabase }) {
   return (
     <div>
-      <Home />
+      <Home supabase={supabase}/>
       AllInfo
     </div>
   )

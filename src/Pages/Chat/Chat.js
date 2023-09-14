@@ -2,10 +2,10 @@ import React from 'react'
 import './Chat.scss'
 import Home from '../../Components/Home'
 
-export default function Chat() {
+export default function Chat( {supabase} ) {
   return (
     <div>
-      <Home />
+      <Home supabase={supabase}/>
       Chat
     </div>
   )
