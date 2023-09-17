@@ -1,5 +1,5 @@
-import { createClient } from '@supabase/supabase-js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { supabase } from './supabase/client';
 import './App.scss';
 import Home from './Components/Home';
 import Auth from './Pages/Auth/Auth';
@@ -14,9 +14,7 @@ import EmailConfirmationPage from './Components/EmailConfirmationPage/EmailConfi
 // import NumberConfirm from './Pages/NumberConfirm/NumberConfirm'
 
 function App() {
-  const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL;
-  const SUPABASE_API_KEY = process.env.REACT_APP_SUPABASE_API_KEY;
-  const supabase = createClient(SUPABASE_URL, SUPABASE_API_KEY);
+  
 
   // const user = supabase.auth.getUser()
   // if (user) {

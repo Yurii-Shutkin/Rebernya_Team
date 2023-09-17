@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { signIn } from '../../supabase/signIn'
+import { checkUser } from '../../supabase/checkUser'
 import './Auth.scss'
 import Button from '../../Common/Button/Button'
 
@@ -10,44 +12,10 @@ export default function Auth({ supabase }) {
   })
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  // const session = supabase.auth.session();
 
   useEffect(() => {
-    const authListener = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN') {
-        navigate('/all_info')
-      } else {
-        return
-      }
-    });
+    checkUser(navigate, '/all_info')
   })
-  // const signIn = async(num) => {
-  //   let { error } = await supabase.auth.signInWithOtp(
-  //     { phone: num }
-  //   )
-
-  //   if (error) {
-  //     console.log(error)
-  //     return
-  //   }
-  // }
-
-  const signIn = async () => {
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: formData.email,
-        password: formData.password,
-      })
-      navigate('/all_info')
-      if (error) {
-        setError(error.message); // Установка ошибки в состояние
-        navigate('/auth')
-        return; // Выход из функции, чтобы избежать дальнейших действий
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -60,7 +28,7 @@ export default function Auth({ supabase }) {
   }
   
   const onSignInHandler = () => {
-    signIn();
+    signIn(formData, navigate, '/all_info', '/auth', setError);
   }
   
   const onSignUpHandler = () => {

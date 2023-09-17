@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { logout } from '../supabase/logout'
 import Header from './Header/Header'
 import Nav from './Nav/Nav'
 import LoadSpinner from '../Common/LoadSpinner/LoadSpinner'
@@ -35,27 +36,10 @@ export default function Home({ supabase }) {
     fetchUserMetadata(); // Вызов функции для получения метаданных при монтировании компонента
   }, []);
 
-  async function logout() {
-    try {
-      const { error } = await supabase.auth.signOut();
-  
-      if (error) {
-        console.error('Ошибка выхода из системы:', error);
-        return;
-      }
-  
-      console.log('Выход из системы успешно выполнен');
-      navigate('/auth')
-      // Вы можете перенаправить пользователя на страницу входа или домашнюю страницу
-    } catch (error) {
-      console.error('Ошибка:', error.message);
-    }
-  }
-
   console.log(user)
 
   const onClickHandler = () => {
-    logout();
+    logout(navigate, '/auth');
     
   }
 
