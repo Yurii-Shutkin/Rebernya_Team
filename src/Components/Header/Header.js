@@ -3,7 +3,7 @@ import './Header.scss'
 
 import InfoCard from '../../Common/InfoCard/InfoCard'
 
-export default function Header({firstName, lastName, lokalNum}) {
+export default function Header({firstName, lastName, lokalNum, duty}) {
   return (
     <div className="Header">
         <div className="usercard">
@@ -11,8 +11,8 @@ export default function Header({firstName, lastName, lokalNum}) {
           <p className="usercard__lokalnum">{lokalNum}</p>
         </div>
         <div className="infoblock">
-          <InfoCard />
-          <InfoCard />
+          <InfoCard title={'Реберня на Аркадії'}/>
+          <InfoCard title={duty}/>
         </div>
     </div>
   )

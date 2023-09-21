@@ -51,6 +51,7 @@ export default function Home({ supabase }) {
         firstName={userMetadata.first_name}
         lastName={userMetadata.last_name}
         lokalNum={userMetadata.lokal_num}
+        duty={userMetadata.duty}
       />
       <Nav />
       <button onClick={onClickHandler}>Выйти</button>

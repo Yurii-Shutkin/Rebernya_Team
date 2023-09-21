@@ -23,3 +23,11 @@ h1, h2, h3, h4, h5, h6, p, span {
 ul, li {
   margin: 0;
 }
+
+select {
+  color: #787878;
+}
+
+select option:checked {
+  color: #000;
+}

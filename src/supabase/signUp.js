@@ -10,6 +10,7 @@ export const signUp = async (formData, navFn, navPath) => {
           first_name: formData.first_name,
           last_name: formData.last_name,
           lokal_num: formData.lokal_num,
+          duty: formData.duty,
           date_of_birth: formData.date_of_birth,
           city: formData.city,
         }
