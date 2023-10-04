@@ -29,17 +29,19 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
        <div className="App">
         <Routes>
-          <Route path={'/'} element={<Home supabase={supabase}/>} />
+          <Route path={'/'} element={<Home supabase={supabase}/>} >
+            {/* <Route path={'/confirm_num'} element={<NumberConfirm supabase={supabase}/>} /> */}
+            <Route path={'/all_info'} element={<AllInfo supabase={supabase}/>}/>
+            <Route path={'/work_shedule'} element={<WorkShedule supabase={supabase}/>}/>
+            <Route path={'/point_system'} element={<PointSystem supabase={supabase}/>}/>
+            <Route path={'/info'} element={<Info supabase={supabase}/>}/>
+            <Route path={'/share_common'} element={<ShareCommon supabase={supabase}/>}/>
+            <Route path={'/chat'} element={<Chat supabase={supabase}/>}/>
+          </Route> 
           <Route path={'/auth'} element={<Auth supabase={supabase}/>} />
-          <Route path={'/confirm'} element={<EmailConfirmationPage supabase={supabase}/>} />
-          {/* <Route path={'/confirm_num'} element={<NumberConfirm supabase={supabase}/>} /> */}
           <Route path={'/sign_up'} element={<SignUp supabase={supabase}/>} />
-          <Route path={'/all_info'} element={<AllInfo supabase={supabase}/>}/>
-          <Route path={'/work_shedule'} element={<WorkShedule supabase={supabase}/>}/>
-          <Route path={'/point_system'} element={<PointSystem supabase={supabase}/>}/>
-          <Route path={'/info'} element={<Info supabase={supabase}/>}/>
-          <Route path={'/share_common'} element={<ShareCommon supabase={supabase}/>}/>
-          <Route path={'/chat'} element={<Chat supabase={supabase}/>}/>
+          <Route path={'/confirm'} element={<EmailConfirmationPage supabase={supabase}/>} />
+
         </Routes>
       </div>
     </Router>
